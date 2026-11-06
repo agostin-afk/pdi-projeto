@@ -1,0 +1,22 @@
+[package]
+name = "image_proc"
+version = "0.1.0"
+edition = "2021"
+description = "Processador de imagens clássico (PDI) com interface gráfica - Trabalho 1"
+
+[dependencies]
+eframe = { version = "0.27", default-features = true }
+egui = "0.27"
+egui_extras = { version = "0.27", features = ["image"] }
+image = { version = "0.25", features = ["jpeg", "png", "bmp", "gif", "webp"] }
+rfd = "0.14"
+anyhow = "1.0"
+# rustfft e num-complex podem ser adicionados depois se implementarmos DFT
+
+[lib]
+name = "image_proc"
+path = "lib.rs"
+
+[[bin]]
+name = "image_proc"
+path = "main.rs"
